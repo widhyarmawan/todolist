@@ -1,0 +1,29 @@
+@import '../../../assets/styles/variable';
+@import '../../../assets/styles/mixin';
+
+.Button {
+    display: inline-block;
+    padding: 0.6em 1.4em;
+    font-size: 1.3rem;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    outline: none !important;
+    border: none;
+    color: $v-white;
+    background: $v-blue;
+    font-weight: bold;
+    cursor: pointer;
+    @include border-radius(border-radius, 4px);
+    @include transition(opacity .3s);
+}
+
+.Button:hover {
+    opacity: .9;
+}
+
+.Button:disabled {
+    opacity: .7;
+}

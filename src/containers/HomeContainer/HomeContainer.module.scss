@@ -1,0 +1,55 @@
+@import '../../assets/styles/variable';
+@import '../../assets/styles/mixin';
+
+.Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.Wrapper {
+    margin-top: 72px;
+    padding: 24px 16px;
+    .Content {
+        width: 100%;
+        max-width: $v-container;
+        margin: 0 auto;
+        padding: 24px;
+        background: $v-white;
+        @include box-sizing(border-box);
+        @include border-radius(border-radius, 8px);
+        .Head {
+            display: flex;
+            justify-content: space-between;
+            .Title {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+        .List {
+            margin: 0;
+            padding: 24px 0 0;
+            .Item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                border-top: 1px solid $v-grey-light;
+                @include transition("background .3s, box-shadow .3s");
+                cursor: pointer;
+                .Label {
+                    padding: 16px;
+                    flex: 1;
+                }
+                .Action {
+                    padding: 16px;
+                }
+    
+            }
+            .Item:hover {
+                background: $v-white;
+                @include border-radius(border-radius, 16px);
+                @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.08));
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../../assets/styles/mixin';
+@import '../../../assets/styles/variable';
+@import '../../../assets/styles/animation';
+
+.Wrapper {
+    position: relative;
+    .TextArea {
+        border: 1px solid #eee;
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        @include border-radius(border-radius, 4px);
+        @include box-sizing(border-box);
+        @include transition("border .3s, color .3s");
+        @include appearance(none);
+        &.HasError {
+            border: 1px solid $v-red-light !important;
+            color: $v-red-light;
+        }
+        &.HasError::placeholder {
+            color: $v-red-light;
+        }
+    }
+    .TextArea:focus {
+        outline: none;
+        border: 1px solid $v-grey;
+    }
+    .TextArea::placeholder {
+        color: #999;
+    }
+    .ErrorMsg {
+        color: $v-red;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+    }
+}
+
+@include errorMsg();
+
+.Open {
+    @include animation(open .3s);
+}
+
+.Close {
+    @include animation(close .3s);
+}

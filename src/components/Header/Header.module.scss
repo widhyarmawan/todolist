@@ -1,0 +1,22 @@
+@import '../../assets/styles/variable';
+@import '../../assets/styles/mixin';
+
+.Wrapper {
+    width: 100%;
+    background: $v-white;
+    border-bottom: 1px solid $v-grey-light;
+    @include box-shadow(0 3px 6px 0 rgba(0,0,0,0.1));
+    .Container {
+        height: 72px;
+        margin: 0 auto;
+        padding: 0 16px;
+        width: 100%;
+        max-width: $v-container;
+        display: flex;
+        align-items: center;
+        @include box-sizing(border-box);
+        .Img {
+            height: 60px;
+        }
+    }
+}

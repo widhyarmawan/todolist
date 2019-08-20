@@ -1,0 +1,49 @@
+@mixin popup($suffix:"") {
+    @keyframes open#{$suffix} {
+        0% {
+            opacity: 0;
+            @include transform(scale(.7));
+        }
+        100% {
+            opacity: 1;
+            @include transform(scale(1));
+        }
+    }
+    
+    @keyframes close#{$suffix} {
+        0% {
+            opacity: 1;
+            @include transform(scale(1));
+        }
+        100% {
+            opacity: 0;
+            @include transform(scale(.7));
+        }
+        
+    }
+}
+
+@mixin errorMsg($suffix:"") {
+    @keyframes open#{$suffix} {
+        0% {
+            opacity: 0;
+            @include transform(translateY(-30%));
+        }
+        100% {
+            opacity: 1;
+            @include transform(translateY(0));
+        }
+    }
+    
+    @keyframes close#{$suffix} {
+        0% {
+            opacity: 1;
+            @include transform(translateY(0));
+        }
+        100% {
+            opacity: 0;
+            @include transform(translateY(-30%));
+        }
+        
+    }
+}

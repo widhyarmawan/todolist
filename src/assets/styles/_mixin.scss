@@ -1,0 +1,47 @@
+@mixin border-radius($prop, $val) {
+    #{$prop}: $val;
+    -webkit-#{$prop}: $val;
+    -moz-#{$prop}: $val;
+}
+
+@mixin box-sizing($val) {
+    box-sizing: $val;
+    -moz-box-sizing: $val;
+    -webkit-box-sizing: $val;    
+}
+
+@mixin transition($val) {
+    transition: #{$val};
+    -webkit-transition: #{$val};
+    -moz-transition: #{$val};
+}
+
+@mixin box-shadow($val) {
+    box-shadow: $val;
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+}
+
+@mixin animation($val) {
+    animation: $val;
+    -webkit-animation: $val;
+    -moz-animation: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+}
+
+@mixin transform($val) {
+    transform: $val;
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+}
+
+@mixin appearance($val) {
+    -webkit-appearance: $val;
+    -moz-appearance: $val;
+    appearance: $val;
+}
